@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: avuong/ubuntu-ucclaprrla-deploy:latest
+      - image: avuong/ubuntu-uclaprrla-deploy:latest
     steps:
       - checkout
       - run: echo 'Hello world'
