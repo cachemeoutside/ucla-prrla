@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Deploy to test site
           command: |
-            which awscli
+            which aws
             echo "$TestVar"
 
 
