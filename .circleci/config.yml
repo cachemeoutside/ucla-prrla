@@ -7,7 +7,9 @@ jobs:
       - checkout
       - run:
           name: Test
-          command: uname -a
+          command: |
+            pwd
+            which npm
 
       
 #      - setup_remote_docker:
