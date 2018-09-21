@@ -1,18 +1,20 @@
 version: 2
 jobs:
-  deploy:
+  build:
     docker:
       - image: avuong/ubuntu-uclaprrla-deploy:latest
     steps:
       - checkout
       - run:
-          name: Test
+          name: Build static files via Angular
           command: |
             pwd
             ls -la
             npm --version
             uname -a
             cd ucla-prrla; npm install; node_modules/.bin/ng build
+      - run:
+          name: Deploy to test site
             which awscli
 
       
