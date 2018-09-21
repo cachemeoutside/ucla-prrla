@@ -9,6 +9,7 @@ jobs:
           name: Test
           command: |
             pwd
+            ls -la
             npm --version
             uname -a
 
