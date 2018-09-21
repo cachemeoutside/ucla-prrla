@@ -7,5 +7,10 @@ jobs:
       - checkout
       - setup_remote_docker:
           version: "18.06.0-ce"
-      - run: "uname -a"
-      - run: "pwd"
+      - run:
+          docker --version
+      - run:
+          name: "PRRLA Container"
+          command: |
+            docker run --name prrladeploy avuong/ubuntu-uclaprrla-deploy:latest
+            docker exec --tty prrladeploy sh -c "pwd"
