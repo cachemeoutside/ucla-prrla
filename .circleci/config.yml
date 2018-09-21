@@ -23,7 +23,7 @@ jobs:
           name: Deploy to test site
           command: |
             which aws
-            aws s3 ls
+            aws s3 ls s3://test-prl.library.ucla.edu/
 
 
       
