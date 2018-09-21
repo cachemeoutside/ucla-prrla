@@ -24,7 +24,8 @@ jobs:
             which aws
             export AWS_ACCESS_KEY_ID="${CIRCLE_BRANCH}_AWS_ACCESS_KEY_ID"
             export AWS_SECRET_ACCESS_KEY="${CIRCLE_BRANCH}_AWS_SECRET_ACCESS_KEY"
-            aws s3 ls s3://test-prl.library.ucla.edu/
+            if [ $CIRCLE_BRANCH == "develop" ] then export WEBURL="${CIRCLE_BRANCH}_site" fi
+            aws s3 ls s3://$WEBURL/
 
 
       
