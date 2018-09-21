@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  deploy:
     docker:
       - image: avuong/ubuntu-uclaprrla-deploy:latest
     steps:
@@ -12,7 +12,8 @@ jobs:
             ls -la
             npm --version
             uname -a
-            cd ucla-prrla; npm install; node_modules/.bin/ng build; ls -la dist/
+            cd ucla-prrla; npm install; node_modules/.bin/ng build
+            which awscli
 
       
 #      - setup_remote_docker:
