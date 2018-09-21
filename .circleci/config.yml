@@ -5,7 +5,7 @@ jobs:
       - image: avuong/ubuntu-uclaprrla-deploy:latest
     steps:
       - checkout
-      run:
+      - run:
         name: Test
         command: uname -a
 
