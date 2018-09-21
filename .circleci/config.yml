@@ -5,4 +5,4 @@ jobs:
       - image: avuong/ubuntu-uclaprrla-deploy:latest
     steps:
       - checkout
-      - run: echo 'Hello world'
+      - run: echo 'uname -a'
