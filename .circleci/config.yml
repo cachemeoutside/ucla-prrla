@@ -6,6 +6,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-        docker_layer_caching:true
-      - run: uname -a
-      - run: pwd
+        version: "18.06.0-ce"
+      - run: "uname -a"
+      - run: "pwd"
