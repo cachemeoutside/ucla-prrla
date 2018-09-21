@@ -5,12 +5,17 @@ jobs:
       - image: avuong/ubuntu-uclaprrla-deploy:latest
     steps:
       - checkout
-      - setup_remote_docker:
-          version: "18.06.0-ce"
-      - run:
-          docker --version
-      - run:
-          name: "PRRLA Container"
-          command: |
-            docker run --name prrladeploy avuong/ubuntu-uclaprrla-deploy:latest
-            docker exec --tty prrladeploy sh -c "pwd"
+      run:
+        name: Test
+        command: uname -a
+
+      
+#      - setup_remote_docker:
+#          version: "18.06.0-ce"
+#      - run:
+#          docker --version
+#      - run:
+#          name: "PRRLA Container"
+#          command: |
+#            docker run --name prrladeploy avuong/ubuntu-uclaprrla-deploy:latest
+#            docker exec --tty prrladeploy sh -c "pwd"
