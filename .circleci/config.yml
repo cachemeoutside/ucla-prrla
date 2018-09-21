@@ -12,7 +12,7 @@ jobs:
             ls -la
             npm --version
             uname -a
-            cd ucla-prrla; npm install
+            cd ucla-prrla; npm install; node_modules/.bin/ng build; ls -la dist/
 
       
 #      - setup_remote_docker:
