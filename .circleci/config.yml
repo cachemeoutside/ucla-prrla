@@ -5,5 +5,7 @@ jobs:
       - image: avuong/ubuntu-uclaprrla-deploy:latest
     steps:
       - checkout
+      - setup_remote_docker:
+        docker_layer_caching:true
       - run: uname -a
       - run: pwd
