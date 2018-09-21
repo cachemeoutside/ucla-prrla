@@ -13,17 +13,17 @@ jobs:
             npm --version
             uname -a
             cd ucla-prrla; npm install; node_modules/.bin/ng build
-      - run:
-          name: Drop robots.txt
-          command: |
-            pwd
-            echo "User-agent: *" > ucla-prrla/dist/robots.txt
-            echo "Disallow: /" >> ucla-prrla/dist/robots.txt
-      - run:
-          name: Deploy to test site
-          command: |
-            which aws
-            aws s3 ls s3://test-prl.library.ucla.edu/
+  deployment:
+    branch: develop
+    commands:
+      - echo "User-agent: *" > ucla-prrla/dist/robots.txt
+      - echo "Disallow: /" > ucla-prrla/dist/robots.txt
+      - which aws
+#      - run:
+#          name: Deploy to test site
+#          command: |
+#            which aws
+#            aws s3 ls s3://test-prl.library.ucla.edu/
 
 
       
