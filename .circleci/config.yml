@@ -12,6 +12,7 @@ jobs:
             ls -la
             npm --version
             uname -a
+            cd ucla-prrla; npm install
 
       
 #      - setup_remote_docker:
